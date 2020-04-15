@@ -4,7 +4,7 @@ FROM php:7.4.4-alpine
 RUN apk add --no-cache tini
 
 # Install PHP Code Standard Fixer - https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases
-COPY --from=composer:1.10.4 /usr/bin/composer /usr/bin/composer
+COPY --from=composer:1.10.5 /usr/bin/composer /usr/bin/composer
 RUN COMPOSER_HOME="/composer" \
 	composer global require --prefer-dist --no-progress --no-suggest --dev friendsofphp/php-cs-fixer:2.16.2
 ENV PATH /composer/vendor/bin:${PATH}
