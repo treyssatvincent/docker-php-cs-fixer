@@ -1,4 +1,4 @@
-FROM php:7.4.6-alpine
+FROM php:7.4.7-alpine
 
 # Install Tini - https://github.com/krallin/tini
 RUN apk add --no-cache tini
