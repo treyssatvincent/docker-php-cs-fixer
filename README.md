@@ -5,6 +5,7 @@ Docker image for [PHP Code Standard Fixer](https://cs.symfony.com/).
 ### Gitlab CI
 
 ``` yml
+# .gitlab-ci.yml
 stages:
   - test
 
@@ -20,6 +21,3 @@ job:test:lint:
 ``` bash
 docker run --rm -v $(pwd):/app ninobysa/php-cs-fixer fix ./src
 ```
-
-## Credit
-Based on [phpqa/php-cs-fixer](https://github.com/phpqa/php-cs-fixer).
