@@ -19,13 +19,11 @@ isCommand() {
 }
 
 if [ "$(printf %c "$1")" = '-' ]; then
-  set -- php /composer/vendor/bin/php-cs-fixer "$@"
-elif [ "$1" = "/composer/vendor/bin/php-cs-fixer" ]; then
-  set -- php "$@"
+  set -- /php-cs-fixer "$@"
 elif [ "$1" = "php-cs-fixer" ]; then
-  set -- php /composer/vendor/bin/"$@"
+  set -- /"$@"
 elif isCommand "$1"; then
-  set -- php /composer/vendor/bin/php-cs-fixer "$@"
+  set -- /php-cs-fixer "$@"
 fi
 
 exec "$@"
