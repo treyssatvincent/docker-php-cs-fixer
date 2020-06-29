@@ -1,8 +1,5 @@
 FROM php:7.4.7-alpine
 
-# Install Tini - https://github.com/krallin/tini
-RUN apk add --no-cache tini
-
 # Install PHP Code Standard Fixer - https://github.com/FriendsOfPHP/PHP-CS-Fixer/releases
 COPY --from=composer:1.10.7 /usr/bin/composer /usr/bin/composer
 RUN COMPOSER_HOME="/composer" \
