@@ -13,7 +13,7 @@ job:test:lint:
   stage: test
   image: ninobysa/php-cs-fixer
   script:
-    - /php-cs-fixer fix --dry-run -vvv --diff ./src
+    - php-cs-fixer fix --dry-run -vvv --diff ./src
 ```
 
 ### Local usage
