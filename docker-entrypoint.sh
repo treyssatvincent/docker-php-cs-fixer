@@ -19,11 +19,11 @@ isCommand() {
 }
 
 if [ "$(printf %c "$1")" = '-' ]; then
-  set -- /php-cs-fixer "$@"
+  set -- php-cs-fixer "$@"
 elif [ "$1" = "php-cs-fixer" ]; then
-  set -- /"$@"
+  set -- "$@"
 elif isCommand "$1"; then
-  set -- /php-cs-fixer "$@"
+  set -- php-cs-fixer "$@"
 fi
 
 exec "$@"
