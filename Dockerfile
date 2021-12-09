@@ -1,4 +1,4 @@
-FROM php:7.4.26-alpine
+FROM php:8.0.6-alpine
 
 # Add entrypoint script
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
